@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>BookMark | ziad</title>
+  </head>
+  <body>
+    <main class="interface py-5 position-relative">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="py-2 position-relative">Bookmarker</h1>
+        <div
+          class="bookmark-body w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4"
+        >
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div
+            class="site-name w-100 d-flex flex-column justify-content-center"
+          >
+            <label for="bookmarkName" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control"
+              id="bookmarkName"
+            />
+          </div>
+          <div class="site-url w-100 d-flex flex-column justify-content-center">
+            <label for="bookmarkURL" class="pb-2 fw-semibold">
+              <i class="fa-solid fa-link pe-2"></i>Site URL</label
+            >
+            <input
+              type="url"
+              placeholder="Website URL"
+              class="form-control"
+              id="bookmarkURL"
+            />
+          </div>
+          <button class="btn btn-submit px-5" id="submitBtn">Submit</button>
+        </div>
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <tr>
+              <th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+      <div
+        class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none"
+      >
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+          <header
+            class="box-header w-100 d-flex justify-content-between align-items-center mb-4"
+          >
+            <div class="circles d-flex">
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+              <span class="rounded-circle me-2"></span>
+            </div>
+            <button class="btn border-0" id="closeBtn">
+              <i class="fa-solid fa-xmark close fs-3"></i>
+            </button>
+          </header>
+          <p class="m-0 pb-2">
+            Site Name or Url is not valid, Please follow the rules below :
+          </p>
+          <ol class="rules list-unstyled m-0">
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site name must
+              contain at least 3 characters
+            </li>
+            <li>
+              <i class="fa-regular fa-circle-right p-2"></i>Site URL must be a
+              valid one
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
